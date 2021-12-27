@@ -1,0 +1,530 @@
+{
+  "id": "5e2d30c6-0cec-40fd-8cc4-9d3f90cae881",
+  "version": "2.0",
+  "name": "UI Tests Vacancy Management&nbsp;",
+  "url": "http://127.0.0.1:8000/vacancymanagement",
+  "tests": [{
+    "id": "977cdc03-eced-444b-b630-a7a5acbeb60e",
+    "name": "TC-16-01-01.1",
+    "commands": []
+  }, {
+    "id": "6183fadd-ac38-46e3-a472-af7f717437a3",
+    "name": "TC-16-02-01.1",
+    "commands": []
+  }, {
+    "id": "364c4389-a215-4022-9eb4-efacef366947",
+    "name": "TC-16-03-01.1",
+    "commands": []
+  }, {
+    "id": "55a882a2-5a92-4a75-a104-e43f6f3742eb",
+    "name": "TC-16-03-02.1 - update",
+    "commands": [{
+      "id": "7c9bfe35-4db1-419d-a933-6499ac19a372",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/vacancymanagement",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bb805da-ed88-476f-8745-4d036d39669e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "952x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c49a4168-6f6d-4458-a76b-e49ad3795c76",
+      "comment": "",
+      "command": "click",
+      "target": "css=.odd .btn-warning",
+      "targets": [
+        ["css=.odd .btn-warning", "css:finder"],
+        ["xpath=//table[@id='datatableid']/tbody/tr/td[7]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/vacancymanagement/1/edit')]", "xpath:href"],
+        ["xpath=//td[7]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "45a1ed11-6165-4a53-8d90-3ecfcaac9fae",
+      "comment": "",
+      "command": "type",
+      "target": "id=exampleInputEmail1",
+      "targets": [
+        ["id=exampleInputEmail1", "id"],
+        ["name=minimum_batch", "name"],
+        ["css=form > .form-group:nth-child(3) #exampleInputEmail1", "css:finder"],
+        ["xpath=//input[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "2018"
+    }, {
+      "id": "6fda9467-81c2-475e-abf1-41c358dd080a",
+      "comment": "",
+      "command": "click",
+      "target": "id=exampleInputEmail1",
+      "targets": [
+        ["id=exampleInputEmail1", "id"],
+        ["name=minimum_batch", "name"],
+        ["css=form > .form-group:nth-child(3) #exampleInputEmail1", "css:finder"],
+        ["xpath=//input[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "030c50e4-a0b5-46c8-8fd6-f7fbea3767db",
+      "comment": "",
+      "command": "click",
+      "target": "name=deadline",
+      "targets": [
+        ["name=deadline", "name"],
+        ["css=.form-group:nth-child(4) #exampleInputEmail1", "css:finder"],
+        ["xpath=(//input[@id='exampleInputEmail1'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div/form/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28322ca9-1ac5-41ae-bde6-f59e33656dd3",
+      "comment": "",
+      "command": "type",
+      "target": "name=deadline",
+      "targets": [
+        ["name=deadline", "name"],
+        ["css=.form-group:nth-child(4) #exampleInputEmail1", "css:finder"],
+        ["xpath=(//input[@id='exampleInputEmail1'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div/form/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "2021-07-01"
+    }, {
+      "id": "13d8d9ad-fd6e-4b77-b522-cae352534b11",
+      "comment": "",
+      "command": "type",
+      "target": "name=teaching_duration",
+      "targets": [
+        ["name=teaching_duration", "name"],
+        ["css=.form-group:nth-child(5) #exampleInputEmail1", "css:finder"],
+        ["xpath=(//input[@id='exampleInputEmail1'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div/form/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7c19682-553a-461d-8d90-8b24794e5ef5",
+      "comment": "",
+      "command": "click",
+      "target": "name=teaching_duration",
+      "targets": [
+        ["name=teaching_duration", "name"],
+        ["css=.form-group:nth-child(5) #exampleInputEmail1", "css:finder"],
+        ["xpath=(//input[@id='exampleInputEmail1'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div/form/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "17ed19da-60c7-42f1-a57f-6b50318de251",
+      "comment": "",
+      "command": "click",
+      "target": "name=minimum_score",
+      "targets": [
+        ["name=minimum_score", "name"],
+        ["css=.form-group:nth-child(1) #exampleFormControlSelect1", "css:finder"],
+        ["xpath=//select[@id='exampleFormControlSelect1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div[2]/div/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2716ebe7-5183-4581-b620-9092d4f31d2c",
+      "comment": "",
+      "command": "select",
+      "target": "name=minimum_score",
+      "targets": [],
+      "value": "label=AB"
+    }, {
+      "id": "d7335f63-d3a1-479d-a9de-aea1414fc986",
+      "comment": "",
+      "command": "click",
+      "target": "name=minimum_score",
+      "targets": [
+        ["name=minimum_score", "name"],
+        ["css=.form-group:nth-child(1) #exampleFormControlSelect1", "css:finder"],
+        ["xpath=//select[@id='exampleFormControlSelect1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div[2]/div/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e6ee635-822a-4624-9776-0a3ca711d4d6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Update')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "dcb4b610-317f-4801-ade8-21ca7e185f03",
+    "name": "TC-16-03-02.2 - update",
+    "commands": [{
+      "id": "660ed626-8d07-4db1-a955-97ac14f8faec",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/vacancymanagement",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "efe99edb-22fa-4c11-a2d2-ddd2d4207820",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "952x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c664d67b-e541-45ba-933b-6d9297eb06cd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.odd .btn-warning",
+      "targets": [
+        ["css=.odd .btn-warning", "css:finder"],
+        ["xpath=//table[@id='datatableid']/tbody/tr/td[7]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/vacancymanagement/1/edit')]", "xpath:href"],
+        ["xpath=//td[7]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d1c1f06-a936-44e2-b932-6074be6cc72b",
+      "comment": "",
+      "command": "type",
+      "target": "id=exampleInputEmail1",
+      "targets": [
+        ["id=exampleInputEmail1", "id"],
+        ["name=minimum_batch", "name"],
+        ["css=form > .form-group:nth-child(3) #exampleInputEmail1", "css:finder"],
+        ["xpath=//input[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "2018"
+    }, {
+      "id": "c5a94195-50c7-4c47-8fc7-ab56accc5055",
+      "comment": "",
+      "command": "click",
+      "target": "id=exampleInputEmail1",
+      "targets": [
+        ["id=exampleInputEmail1", "id"],
+        ["name=minimum_batch", "name"],
+        ["css=form > .form-group:nth-child(3) #exampleInputEmail1", "css:finder"],
+        ["xpath=//input[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "edb64ae8-3686-4e65-80bd-462830905d80",
+      "comment": "",
+      "command": "click",
+      "target": "name=deadline",
+      "targets": [
+        ["name=deadline", "name"],
+        ["css=.form-group:nth-child(4) #exampleInputEmail1", "css:finder"],
+        ["xpath=(//input[@id='exampleInputEmail1'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div/form/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2226f45f-0e9c-4770-83c2-5c55c0bb14d2",
+      "comment": "",
+      "command": "type",
+      "target": "name=deadline",
+      "targets": [
+        ["name=deadline", "name"],
+        ["css=.form-group:nth-child(4) #exampleInputEmail1", "css:finder"],
+        ["xpath=(//input[@id='exampleInputEmail1'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div/form/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "2021-07-01"
+    }, {
+      "id": "9d2c4d31-43ff-4758-8e4e-4d234e82e76e",
+      "comment": "",
+      "command": "type",
+      "target": "name=teaching_duration",
+      "targets": [
+        ["name=teaching_duration", "name"],
+        ["css=.form-group:nth-child(5) #exampleInputEmail1", "css:finder"],
+        ["xpath=(//input[@id='exampleInputEmail1'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div/form/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "13daec03-a7f9-4536-97d2-a1b8be558ef0",
+      "comment": "",
+      "command": "click",
+      "target": "name=teaching_duration",
+      "targets": [
+        ["name=teaching_duration", "name"],
+        ["css=.form-group:nth-child(5) #exampleInputEmail1", "css:finder"],
+        ["xpath=(//input[@id='exampleInputEmail1'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div/form/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be12a082-fe97-41aa-aeb8-ddd8df93ea27",
+      "comment": "",
+      "command": "click",
+      "target": "name=minimum_score",
+      "targets": [
+        ["name=minimum_score", "name"],
+        ["css=.form-group:nth-child(1) #exampleFormControlSelect1", "css:finder"],
+        ["xpath=//select[@id='exampleFormControlSelect1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div[2]/div/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "943605a8-58ab-4f49-8e49-44e4037b673e",
+      "comment": "",
+      "command": "select",
+      "target": "name=minimum_score",
+      "targets": [],
+      "value": "label=AB"
+    }, {
+      "id": "d273c1ff-ed8b-4309-91d4-649554f5aca3",
+      "comment": "",
+      "command": "click",
+      "target": "name=minimum_score",
+      "targets": [
+        ["name=minimum_score", "name"],
+        ["css=.form-group:nth-child(1) #exampleFormControlSelect1", "css:finder"],
+        ["xpath=//select[@id='exampleFormControlSelect1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div[2]/div/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e679b6b7-c5c6-431e-b4ac-db791937e3c1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Update')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "8f2da838-aba5-4bd9-8945-05d589cf16fd",
+    "name": "TC-16-03-04.2 (not exist)",
+    "commands": [{
+      "id": "14628521-5da9-4db0-9587-5726624cbd76",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/vacancymanagement",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b34ea206-6b50-4ec2-ade7-1a6387c19126",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "952x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb2429a2-23cf-470f-b605-fe3bcbd5980f",
+      "comment": "",
+      "command": "click",
+      "target": "css=#datatableid_filter .form-control",
+      "targets": [
+        ["css=#datatableid_filter .form-control", "css:finder"],
+        ["xpath=//input[@type='search']", "xpath:attributes"],
+        ["xpath=//div[@id='datatableid_filter']/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ae8e2c1-1826-496b-bb5f-930bab83087c",
+      "comment": "",
+      "command": "type",
+      "target": "css=#datatableid_filter .form-control",
+      "targets": [
+        ["css=#datatableid_filter .form-control", "css:finder"],
+        ["xpath=//input[@type='search']", "xpath:attributes"],
+        ["xpath=//div[@id='datatableid_filter']/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ZA"
+    }]
+  }, {
+    "id": "d48dbc23-3dde-4709-bc1a-9ee2dea2f2eb",
+    "name": "TC-16-03-04.1 (already exist) ",
+    "commands": [{
+      "id": "5bbe272a-af3c-4dba-a2ed-bc1344281565",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/vacancymanagement",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "47db118b-edaf-4603-b5a5-df6847d65acd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "952x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0d649bf-0bd0-4e5f-b803-b40f82b914e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#datatableid_filter .form-control",
+      "targets": [
+        ["css=#datatableid_filter .form-control", "css:finder"],
+        ["xpath=//input[@type='search']", "xpath:attributes"],
+        ["xpath=//div[@id='datatableid_filter']/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "412b160a-b9fc-4604-94fe-8091b063d390",
+      "comment": "",
+      "command": "type",
+      "target": "css=#datatableid_filter .form-control",
+      "targets": [
+        ["css=#datatableid_filter .form-control", "css:finder"],
+        ["xpath=//input[@type='search']", "xpath:attributes"],
+        ["xpath=//div[@id='datatableid_filter']/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "PRO"
+    }]
+  }, {
+    "id": "2b56640f-5a43-4e27-8d06-513244cb9e8b",
+    "name": "TC-16-03-05.1 - detail",
+    "commands": [{
+      "id": "67b273f3-37f7-47bf-a7d7-27a424cf1e99",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/vacancymanagement",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc35dd8a-196f-4937-bcf0-7eb18cfc347d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "952x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "35502300-a9bd-4a31-8ee6-76a787bd3ef6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.odd .btn-info",
+      "targets": [
+        ["css=.odd .btn-info", "css:finder"],
+        ["xpath=//table[@id='datatableid']/tbody/tr/td[7]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/vacancymanagement/1/detail')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "bb7e3f38-8a0e-4a63-9c24-a054f4b0db2f",
+    "name": "TC-16-03-03 - delete",
+    "commands": [{
+      "id": "9bfe575e-5d5a-4510-93b2-c1757c1067ff",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/vacancymanagement",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38f680dc-a76e-4db8-85bd-4dcaacb80c0a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "952x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ffc83f5d-14fe-47b4-acfc-82ff676cb760",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4bae57f8-5041-441e-bbc1-59e529bb76ff",
+      "comment": "",
+      "command": "click",
+      "target": "css=.even .btn-danger > .fa",
+      "targets": [
+        ["css=.even .btn-danger > .fa", "css:finder"],
+        ["xpath=//table[@id='datatableid']/tbody/tr[2]/td[7]/a[3]/i", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[7]/a[3]/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ea33311-b193-4b4c-aa48-3a1c8930ba46",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Are you sure you want to delete this row?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "688aa0fd-fa0f-4a1a-a4f6-b6f61b69a18d",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "961eb0ce-91df-4c07-9298-716c3fdf45be",
+    "name": "TC-16-04-01",
+    "commands": []
+  }],
+  "suites": [{
+    "id": "cf0882ad-561c-49c0-8215-b1b1cff29f9e",
+    "name": "Student Role",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["977cdc03-eced-444b-b630-a7a5acbeb60e"]
+  }, {
+    "id": "b8d8ad66-0104-4b98-b9ee-c839e3a1ebf3",
+    "name": "Admin Role",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["961eb0ce-91df-4c07-9298-716c3fdf45be"]
+  }, {
+    "id": "7f1f5eb0-acae-4923-8513-0aec91837cf3",
+    "name": "TA Role",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6183fadd-ac38-46e3-a472-af7f717437a3"]
+  }, {
+    "id": "e9602426-7d4b-46c0-a83b-5241b6613e28",
+    "name": "Lecturer Role",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["364c4389-a215-4022-9eb4-efacef366947", "55a882a2-5a92-4a75-a104-e43f6f3742eb", "dcb4b610-317f-4801-ade8-21ca7e185f03", "bb7e3f38-8a0e-4a63-9c24-a054f4b0db2f", "d48dbc23-3dde-4709-bc1a-9ee2dea2f2eb", "8f2da838-aba5-4bd9-8945-05d589cf16fd", "2b56640f-5a43-4e27-8d06-513244cb9e8b"]
+  }],
+  "urls": ["http://127.0.0.1:8000/", "http://127.0.0.1:8000/vacancymanagement", "http://127.0.0.1:8000/dashboard"],
+  "plugins": []
+}

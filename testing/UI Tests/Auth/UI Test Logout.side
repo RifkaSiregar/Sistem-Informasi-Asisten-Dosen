@@ -1,0 +1,59 @@
+{
+  "id": "bee50798-4120-4fc9-a2be-5e9e51b5158a",
+  "version": "2.0",
+  "name": "UI Test Logout",
+  "url": "http://127.0.0.1:8000/dashboard",
+  "tests": [{
+    "id": "68e3a3a9-0e8d-4a51-b53c-fd2e4dc34b1a",
+    "name": "TC-03.1",
+    "commands": [{
+      "id": "51ad24a2-1041-472e-8045-55c14b4c7def",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/dashboard",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f02e8586-a939-4d58-938e-5e7349b7c27e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "933x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "925d990f-f137-450a-abc1-4c21af241e80",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown-toggle > span",
+      "targets": [
+        ["css=.dropdown-toggle > span", "css:finder"],
+        ["xpath=//div[@id='navbar-menu']/ul/li/a/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'iss18032')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9bc934f-58e7-4cce-89ff-03f186377bed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown-menu > li:nth-child(2) span",
+      "targets": [
+        ["css=.dropdown-menu > li:nth-child(2) span", "css:finder"],
+        ["xpath=//div[@id='navbar-menu']/ul/li/ul/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "3b2d7a30-9a38-454b-86be-a21d6e7ebbbe",
+    "name": "User",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["68e3a3a9-0e8d-4a51-b53c-fd2e4dc34b1a"]
+  }],
+  "urls": [],
+  "plugins": []
+}

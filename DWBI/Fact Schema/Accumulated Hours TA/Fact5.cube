@@ -1,0 +1,280 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="98f88935-7189-44bb-a22b-0e8e5c0f32df" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact5</ID>
+  <Name>Fact5</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="ffa73c2e-eeaa-4a14-983c-5578c3666541">
+      <ID>Dim Vacancy 1</ID>
+      <Name>Dim Vacancy 1</Name>
+      <DimensionID>Dim Vacancy 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c2e5c409-3624-46ad-bd31-c03485f97097">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="0cfb9e05-42cd-475b-924b-3e8547874e05">
+      <ID>Dim Date 4</ID>
+      <Name>Dim Date 4</Name>
+      <DimensionID>Dim Date 4</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f2f516c7-3887-4c9d-951d-eda7074d9732">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="524d07d4-20e7-46c5-9641-6b640ba60f2f">
+      <ID>Dim Vacancy</ID>
+      <Name>Dim Vacancy</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="dcce7915-6f6c-41ef-bac3-dab00fb76f5b">
+          <ID>Semester Id</ID>
+          <Name>Semester Id</Name>
+          <Source dwd:design-time-name="fafdd491-ed29-4b84-9fcd-9a2f2086f193">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f9fba4f2-1923-4dc6-a231-3331da330451">
+              <TableID>dbo_DimVacancy</TableID>
+              <ColumnID>semester_id</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="7ca7531a-1f21-4059-881c-8b59030cdc1c">
+          <ID>Minimum Batch</ID>
+          <Name>Minimum Batch</Name>
+          <Source dwd:design-time-name="cb42ac35-cfe1-4e2a-855b-1a6c241c77aa">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c3e006dc-6103-47e0-9988-b0a51aa43f43">
+              <TableID>dbo_DimVacancy</TableID>
+              <ColumnID>minimum_batch</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f510a5e2-5255-4771-adeb-f36a94d790f7">
+          <ID>Teaching Duration</ID>
+          <Name>Teaching Duration</Name>
+          <Source dwd:design-time-name="19d054d4-335b-48a3-b10b-457b45bb17a5">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f55a245f-372f-4776-bb38-8f469963f937">
+              <TableID>dbo_DimVacancy</TableID>
+              <ColumnID>teaching_duration</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="78d80039-61cf-4cab-8153-23c075de9017">
+          <ID>Dim Vacancy Count</ID>
+          <Name>Dim Vacancy Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="2233148d-4383-4903-9f65-727b3a635112">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="3f4058e9-cb56-4441-8131-cb4b47db5c33">
+              <TableID>dbo_DimVacancy</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="7bcb3c61-a76e-4d67-96e3-7998d9de862e">
+          <CubeDimensionID>Dim Vacancy 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="165efe2c-a67f-4e9e-8170-d837516caed8">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="68a0ec91-718e-4798-b91d-c56719416899">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="806d649f-f77a-43a1-9475-ba6d50cebe99">
+                    <TableID>dbo_DimVacancy</TableID>
+                    <ColumnID>id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="3830c052-6886-4252-b610-ad8cc5861729">
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="45a8903c-11c0-46c3-b26d-5dca069f02bd">
+          <ID>Day Date</ID>
+          <Name>Day Date</Name>
+          <Source dwd:design-time-name="70627e51-f612-430f-b29f-c8e89e961033">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6801f134-efee-4c36-9e47-c407ddf4fbd3">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>day_date</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1287fec6-e7e5-4108-bf06-edf9d9030c2b">
+          <ID>Dim Date Count</ID>
+          <Name>Dim Date Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="a2d8d1a5-1075-473e-9ad0-b0b0f6c3e8d4">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="ce943d5e-27f7-4d24-9775-542b7cca9f6b">
+              <TableID>dbo_DimDate</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="34627459-121b-44e7-ab26-f9e34f3703a2">
+          <CubeDimensionID>Dim Date 4</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7cd00c33-b35e-4560-8708-5f76edf5b774">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0383e2af-8b05-4b54-a12d-297af4f68dd8">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="94b32f65-f0ac-4f4d-8f5c-2121514e1f8f">
+                    <TableID>dbo_DimDate</TableID>
+                    <ColumnID>id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="d215e136-a298-4935-99b5-a67a227583ce">
+      <ID>TA Vacancies Fact</ID>
+      <Name>TA Vacancies Fact</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="dcf2dbda-187c-4a03-a51c-22f257374d7b">
+          <ID>Total Vacancy</ID>
+          <Name>Total Vacancy</Name>
+          <Source dwd:design-time-name="e3d6d945-796f-4259-97a8-3969508bd3e8">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="154f0d02-0117-4fa7-be2b-72542d27c4e0">
+              <TableID>dbo_TA_Vacancies_Fact</TableID>
+              <ColumnID>total_vacancy</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1aa410ca-ebe1-473d-87df-d541be8d5735">
+          <ID>TA Vacancies Fact Count</ID>
+          <Name>TA Vacancies Fact Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="9d9a18fe-a9db-4447-84f2-a6734aefd354">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="2d8bff3b-1429-4847-9073-be1152600085">
+              <TableID>dbo_TA_Vacancies_Fact</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="54f409a8-614c-46fd-bd55-cf9ed35a3bea">
+          <CubeDimensionID>Dim Vacancy 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f33c9502-b524-485a-a00c-ef2d1b23ac04">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3ba3fe25-fed4-4440-8cd1-201d69c13805">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f80b7eb6-aa12-467a-9cbd-4909e870848c">
+                    <TableID>dbo_TA_Vacancies_Fact</TableID>
+                    <ColumnID>fk_vacancy</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="df73129a-f1c7-4968-a284-6f12896add47">
+          <CubeDimensionID>Dim Date 4</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="27fb3af0-8db4-4307-827c-ad03ff227c75">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d25dd4bf-a860-4520-b544-d07bd06693c5">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f78e12c1-faf4-471b-816e-222f394019c5">
+                    <TableID>dbo_TA_Vacancies_Fact</TableID>
+                    <ColumnID>fk_date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="bdac1a66-d031-4a39-8a83-9fb27d840cef">
+    <DataSourceViewID>Fact5</DataSourceViewID>
+  </Source>
+</Cube>

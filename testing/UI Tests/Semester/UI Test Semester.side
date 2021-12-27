@@ -1,0 +1,162 @@
+{
+  "id": "c3778c1f-078b-4a19-aedc-fa35ac7a848a",
+  "version": "2.0",
+  "name": "UI Test Semester",
+  "url": "http://127.0.0.1:8000/semesters",
+  "tests": [{
+    "id": "9a6c7b9c-4cc1-489f-9b75-f0e666fd63ff",
+    "name": "index_admin",
+    "commands": []
+  }, {
+    "id": "6aa268a6-b52e-48d9-ba65-b6f9dca4362d",
+    "name": "index_lecturer",
+    "commands": []
+  }, {
+    "id": "0754b638-6424-46ac-bacb-4bc3166f1310",
+    "name": "index_student",
+    "commands": []
+  }, {
+    "id": "ed1bf212-a788-4c5b-b81f-45944e312c43",
+    "name": "index_ta",
+    "commands": []
+  }, {
+    "id": "907f4f95-a7dd-406d-bc40-84a037196913",
+    "name": "update",
+    "commands": [{
+      "id": "26741ec6-d1ba-4435-b975-e5be11abd225",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/semesters",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b36881eb-c991-4dd6-98a4-961b72482e2f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "746x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c7f65cd-2e16-4651-8191-72fe1eeccb45",
+      "comment": "",
+      "command": "click",
+      "target": "css=.odd:nth-child(1) .btn-warning",
+      "targets": [
+        ["css=.odd:nth-child(1) .btn-warning", "css:finder"],
+        ["xpath=//table[@id='datatableid']/tbody/tr/td[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/semesters/4/edit')]", "xpath:href"],
+        ["xpath=//td[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a379ace-6384-424e-ac77-daed4d9e2b35",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "527a4172-a1b7-48c0-8043-c72c4f67bde4",
+    "name": "delete",
+    "commands": [{
+      "id": "4a76f2ab-b500-4569-8c67-af4b3f528528",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/semesters",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42e4ad6a-e811-4f58-93df-78f92070a2e2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "748x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "41ad4708-d221-4b90-952a-a714f04fb439",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5eeb7ef2-10d4-4fe7-845b-68df1b065431",
+      "comment": "",
+      "command": "click",
+      "target": "css=.even:nth-child(4) .btn-danger > .fa",
+      "targets": [
+        ["css=.even:nth-child(4) .btn-danger > .fa", "css:finder"],
+        ["xpath=//table[@id='datatableid']/tbody/tr[4]/td[5]/a[2]/i", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[5]/a[2]/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2fb22e3-6479-4103-87be-bb754c2e77bd",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Are you sure you want to delete this row?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f914ef68-7f2c-4774-8185-a562d42fe68d",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f63c25e0-9b63-40eb-a2af-9a24b42b976b",
+    "name": "search",
+    "commands": [{
+      "id": "7b37a395-ba08-427e-a66d-69f8be8b0758",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/semesters",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52475b4f-0a7c-4382-9035-75d9fd915f12",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "746x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7fb3b39-520b-465d-837b-c2c69b70ec9b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#datatableid_filter .form-control",
+      "targets": [
+        ["css=#datatableid_filter .form-control", "css:finder"],
+        ["xpath=//input[@type='search']", "xpath:attributes"],
+        ["xpath=//div[@id='datatableid_filter']/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05dea995-f852-4937-b423-cb2f1d370538",
+      "comment": "",
+      "command": "type",
+      "target": "css=#datatableid_filter .form-control",
+      "targets": [
+        ["css=#datatableid_filter .form-control", "css:finder"],
+        ["xpath=//input[@type='search']", "xpath:attributes"],
+        ["xpath=//div[@id='datatableid_filter']/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "even"
+    }]
+  }],
+  "suites": [{
+    "id": "eb92eb74-1954-420a-8563-97431a0b45a6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://127.0.0.1:8000/semesters"],
+  "plugins": []
+}

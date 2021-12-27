@@ -1,0 +1,490 @@
+{
+  "id": "05929c02-bdbd-4342-beb4-93372fbbd423",
+  "version": "2.0",
+  "name": "UI Test Course Owner",
+  "url": "http://127.0.0.1:8000/courseowner",
+  "tests": [{
+    "id": "ba27e794-9d2d-4816-b88d-2f962166cf53",
+    "name": "Index Admin Role",
+    "commands": []
+  }, {
+    "id": "5fdbd654-0ded-42ad-a516-3e9581293c54",
+    "name": "Index Lecturer Role",
+    "commands": []
+  }, {
+    "id": "0c121376-09bc-422a-8589-db745f497cb3",
+    "name": "Index Student Role",
+    "commands": []
+  }, {
+    "id": "34e2a04f-30b4-4d44-ac86-43959fa8e3e7",
+    "name": "Index TA Role",
+    "commands": []
+  }, {
+    "id": "7529c0f9-e811-471e-ace2-6faff3441a7e",
+    "name": "Add",
+    "commands": [{
+      "id": "bbcd2601-6ba4-4ba9-9626-7922b2ccac7e",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/courseowner",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85470caf-1a72-4003-ada3-547e9585247d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "726x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4d93ca7-90fc-4813-a5f0-3508af765e54",
+      "comment": "",
+      "command": "click",
+      "target": "css=.lnr-plus-circle",
+      "targets": [
+        ["css=.lnr-plus-circle", "css:finder"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div[2]/div/div/a/i", "xpath:idRelative"],
+        ["xpath=//div/a/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "80ff098f-7395-4046-ae59-8ec277cad6dc",
+      "comment": "",
+      "command": "click",
+      "target": "id=exampleInputEmail1",
+      "targets": [
+        ["id=exampleInputEmail1", "id"],
+        ["name=name", "name"],
+        ["css=form > .form-group:nth-child(2) > #exampleInputEmail1", "css:finder"],
+        ["xpath=//input[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e865bfbf-8ffd-4fad-a4bc-92b30ad740d9",
+      "comment": "",
+      "command": "type",
+      "target": "id=exampleInputEmail1",
+      "targets": [
+        ["id=exampleInputEmail1", "id"],
+        ["name=name", "name"],
+        ["css=form > .form-group:nth-child(2) > #exampleInputEmail1", "css:finder"],
+        ["xpath=//input[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Bachelor of Information System"
+    }, {
+      "id": "d62eb28d-d004-4ada-8a46-05ce79a920df",
+      "comment": "",
+      "command": "click",
+      "target": "name=curriculum",
+      "targets": [
+        ["name=curriculum", "name"],
+        ["css=.form-group:nth-child(3) > #exampleInputEmail1", "css:finder"],
+        ["xpath=(//input[@id='exampleInputEmail1'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ca2ace6-3876-4d58-85ca-3e6090c973c0",
+      "comment": "",
+      "command": "type",
+      "target": "name=curriculum",
+      "targets": [
+        ["name=curriculum", "name"],
+        ["css=.form-group:nth-child(3) > #exampleInputEmail1", "css:finder"],
+        ["xpath=(//input[@id='exampleInputEmail1'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "S1SI-2019"
+    }, {
+      "id": "64234c25-426b-439d-8049-8ffbb991fb8b",
+      "comment": "",
+      "command": "click",
+      "target": "id=exampleFormControlSelect1",
+      "targets": [
+        ["id=exampleFormControlSelect1", "id"],
+        ["name=status", "name"],
+        ["css=.form-group:nth-child(4) > #exampleFormControlSelect1", "css:finder"],
+        ["xpath=//select[@id='exampleFormControlSelect1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div/form/div[3]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f0e8bb9-4cca-497a-b60c-d9056a7cfb19",
+      "comment": "",
+      "command": "click",
+      "target": "id=exampleFormControlSelect1",
+      "targets": [
+        ["id=exampleFormControlSelect1", "id"],
+        ["name=status", "name"],
+        ["css=.form-group:nth-child(4) > #exampleFormControlSelect1", "css:finder"],
+        ["xpath=//select[@id='exampleFormControlSelect1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div/form/div[3]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7633a29b-49c6-4f68-a90c-6e33864c34ab",
+      "comment": "",
+      "command": "click",
+      "target": "name=level",
+      "targets": [
+        ["name=level", "name"],
+        ["css=.form-group:nth-child(1) > #exampleFormControlSelect1", "css:finder"],
+        ["xpath=(//select[@id='exampleFormControlSelect1'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//div[2]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "51331c70-0d24-451d-8357-c6478591207f",
+      "comment": "",
+      "command": "select",
+      "target": "name=level",
+      "targets": [],
+      "value": "label=Study Program"
+    }, {
+      "id": "3a0d707d-8af4-4d31-ac43-4cdc77037dfa",
+      "comment": "",
+      "command": "click",
+      "target": "name=level",
+      "targets": [
+        ["name=level", "name"],
+        ["css=.form-group:nth-child(1) > #exampleFormControlSelect1", "css:finder"],
+        ["xpath=(//select[@id='exampleFormControlSelect1'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//div[2]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1e183ca-0cde-432c-87c0-e1ed80d4f794",
+      "comment": "",
+      "command": "click",
+      "target": "name=description",
+      "targets": [
+        ["name=description", "name"],
+        ["css=.col-md-6 > .form-group > #exampleInputEmail1", "css:finder"],
+        ["xpath=//textarea[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div[2]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "17cc9453-9905-4114-a317-8a003a8481f0",
+      "comment": "",
+      "command": "type",
+      "target": "name=description",
+      "targets": [
+        ["name=description", "name"],
+        ["css=.col-md-6 > .form-group > #exampleInputEmail1", "css:finder"],
+        ["xpath=//textarea[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div[2]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "xxx"
+    }, {
+      "id": "e44120ac-f554-4c0c-99d0-3d25dfe52927",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div[2]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e6a27de4-c05f-4228-8e56-51945ff169e0",
+    "name": "Update",
+    "commands": [{
+      "id": "67d61307-5505-4353-89da-e86798b72df9",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/courseowner",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "824ce22e-dfe5-4d98-affe-8715c921af37",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "752x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c30a9d8-632d-4a8f-b71b-015369683236",
+      "comment": "",
+      "command": "click",
+      "target": "css=.even:nth-child(8) .btn-warning",
+      "targets": [
+        ["css=.even:nth-child(8) .btn-warning", "css:finder"],
+        ["xpath=//table[@id='datatableid']/tbody/tr[8]/td[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/courseowner/15/edit')]", "xpath:href"],
+        ["xpath=//tr[8]/td[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d0f10c0-c134-46dc-98c8-5ae58bb95bb3",
+      "comment": "",
+      "command": "click",
+      "target": "id=exampleInputEmail1",
+      "targets": [
+        ["id=exampleInputEmail1", "id"],
+        ["name=name", "name"],
+        ["css=form > .form-group:nth-child(2) > #exampleInputEmail1", "css:finder"],
+        ["xpath=//input[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6c95166-d727-48fc-b1b6-c20c5ec44157",
+      "comment": "",
+      "command": "type",
+      "target": "id=exampleInputEmail1",
+      "targets": [
+        ["id=exampleInputEmail1", "id"],
+        ["name=name", "name"],
+        ["css=form > .form-group:nth-child(2) > #exampleInputEmail1", "css:finder"],
+        ["xpath=//input[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e27e5bb-5b01-4f45-b3c7-4527e6243b7c",
+      "comment": "",
+      "command": "click",
+      "target": "name=curriculum",
+      "targets": [
+        ["name=curriculum", "name"],
+        ["css=.form-group:nth-child(3) > #exampleInputEmail1", "css:finder"],
+        ["xpath=(//input[@id='exampleInputEmail1'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9934b3e-6689-459a-b35b-133d2e12fe6f",
+      "comment": "",
+      "command": "type",
+      "target": "name=curriculum",
+      "targets": [
+        ["name=curriculum", "name"],
+        ["css=.form-group:nth-child(3) > #exampleInputEmail1", "css:finder"],
+        ["xpath=(//input[@id='exampleInputEmail1'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "FB-2019"
+    }, {
+      "id": "5c752732-5d58-40d3-8c8d-1f95505b7db4",
+      "comment": "",
+      "command": "click",
+      "target": "name=status",
+      "targets": [
+        ["name=status", "name"],
+        ["css=.form-group:nth-child(4) > #exampleInputEmail1", "css:finder"],
+        ["xpath=//select[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div/form/div[3]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6dba31d0-faa9-403a-b5e9-dff47c50d807",
+      "comment": "",
+      "command": "click",
+      "target": "name=status",
+      "targets": [
+        ["name=status", "name"],
+        ["css=.form-group:nth-child(4) > #exampleInputEmail1", "css:finder"],
+        ["xpath=//select[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div/form/div[3]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fda3e3e-bfa5-4eb1-ac48-863a2b07b90b",
+      "comment": "",
+      "command": "click",
+      "target": "name=level",
+      "targets": [
+        ["name=level", "name"],
+        ["css=.form-group:nth-child(1) > #exampleInputEmail1", "css:finder"],
+        ["xpath=(//select[@id='exampleInputEmail1'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//div[2]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "abe786cd-7388-43d7-a468-56dda7c4a2e8",
+      "comment": "",
+      "command": "select",
+      "target": "name=level",
+      "targets": [],
+      "value": "label=Faculty"
+    }, {
+      "id": "5d2ac8d3-27ec-4b6c-8411-903eb7aac0df",
+      "comment": "",
+      "command": "click",
+      "target": "name=level",
+      "targets": [
+        ["name=level", "name"],
+        ["css=.form-group:nth-child(1) > #exampleInputEmail1", "css:finder"],
+        ["xpath=(//select[@id='exampleInputEmail1'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//div[2]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e23f7da-ed1c-4b09-bd8e-ac034db1380f",
+      "comment": "",
+      "command": "click",
+      "target": "name=description",
+      "targets": [
+        ["name=description", "name"],
+        ["css=.col-md-6 > .form-group:nth-child(2) > #exampleInputEmail1", "css:finder"],
+        ["xpath=//textarea[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div[2]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f2fcd5e-7b59-468c-8fbc-3ecd6cf1da73",
+      "comment": "",
+      "command": "type",
+      "target": "name=description",
+      "targets": [
+        ["name=description", "name"],
+        ["css=.col-md-6 > .form-group:nth-child(3) > #exampleInputEmail1", "css:finder"],
+        ["xpath=//textarea[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div[2]/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "xxx"
+    }, {
+      "id": "74ae1aec-3c2c-49f8-b7dc-0eeda4ab7645",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-warning",
+      "targets": [
+        ["css=.btn-warning", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='wrapper']/div[2]/div/div/div/div/div/div[2]/div/div[2]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Update')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0f0d9024-180b-41ac-a79e-23a9f6612e12",
+    "name": "Delete",
+    "commands": [{
+      "id": "84e9de76-9eac-4420-8c48-f54481c8b896",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/courseowner",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38cdd93a-0e5b-4b8e-88bc-1edd82e035e0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "746x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1147d7de-f19e-43ee-886e-27fc646bbd12",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06ea8ac6-4c84-4b2b-8fa5-aab4c71db46a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.even:nth-child(8) .btn-danger > .fa",
+      "targets": [
+        ["css=.even:nth-child(8) .btn-danger > .fa", "css:finder"],
+        ["xpath=//table[@id='datatableid']/tbody/tr[8]/td[5]/a[2]/i", "xpath:idRelative"],
+        ["xpath=//tr[8]/td[5]/a[2]/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c78d7ba0-7146-4d09-b28c-b2dea1c51681",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Are you sure you want to delete this row?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b501fe39-8a72-40c0-ac0b-b878a8c3965e",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9e72b5cc-58d0-44b6-ae3a-55095ca57a10",
+    "name": "Search",
+    "commands": [{
+      "id": "c025c70d-6e19-48a8-abca-8d20f751262a",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/courseowner",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f26d4b20-c0c0-4379-bcd3-c34b682b4434",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "728x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "45e53c43-0d38-4fdf-93ba-aa404d9b9f2b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#datatableid_filter .form-control",
+      "targets": [
+        ["css=#datatableid_filter .form-control", "css:finder"],
+        ["xpath=//input[@type='search']", "xpath:attributes"],
+        ["xpath=//div[@id='datatableid_filter']/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7e874f5-def0-432a-8cb5-f142842decd3",
+      "comment": "",
+      "command": "type",
+      "target": "css=#datatableid_filter .form-control",
+      "targets": [
+        ["css=#datatableid_filter .form-control", "css:finder"],
+        ["xpath=//input[@type='search']", "xpath:attributes"],
+        ["xpath=//div[@id='datatableid_filter']/label/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Diplomatic"
+    }]
+  }],
+  "suites": [{
+    "id": "17a6e361-be4a-4184-baae-984eb172af98",
+    "name": "Course Owner",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7529c0f9-e811-471e-ace2-6faff3441a7e", "0f0d9024-180b-41ac-a79e-23a9f6612e12", "e6a27de4-c05f-4228-8e56-51945ff169e0", "9e72b5cc-58d0-44b6-ae3a-55095ca57a10", "34e2a04f-30b4-4d44-ac86-43959fa8e3e7", "0c121376-09bc-422a-8589-db745f497cb3", "5fdbd654-0ded-42ad-a516-3e9581293c54", "ba27e794-9d2d-4816-b88d-2f962166cf53"]
+  }],
+  "urls": ["http://127.0.0.1:8000/courseowner"],
+  "plugins": []
+}

@@ -1,0 +1,501 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9426bba7-6d32-4cbb-80eb-d299bafe3123" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact4</ID>
+  <Name>Fact4</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout>
+              <dds>
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="14" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-6308" scrolltop="-415" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="18389" y="13811" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                  <font>
+                    <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                  </font>
+                  <mouseicon>
+                    <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                  </mouseicon>
+                </diagram>
+                <layoutmanager>
+                  <ddsxmlobj />
+                </layoutmanager>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="TA_Enrollment_Fact" left="-2591" top="3563" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4023" height="2584" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c0000b70f0000180a0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_TA_Enrollment_Fact" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimApplication" left="2912" top="3605" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="5106" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c0000f21300009b0f0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_DimApplication" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimDate" left="-1988" top="-141" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c0000b80b0000a50a0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_DimDate" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimSemester" left="9995" top="8207" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3757" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c0000ad0e0000f40d0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_DimSemester" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimVacancy" left="9844" top="3596" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3466" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c00008a0d00009b0f0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_DimVacancy" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimCourse" left="3350" top="9416" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3360" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c0000200d0000f40d0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_DimCourse" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimCourseOwner" left="-2221" top="9357" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000c0000b80b0000f40d0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_DimCourseOwner" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="7718" top="3544" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="2426" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FK_DimApplication_DimVacancy]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="2" sourceattachpoint="10" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="9844" y="3943" />
+                    <point x="8931" y="3943" />
+                    <point x="8931" y="3952" />
+                    <point x="8018" y="3952" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="6410" top="9153" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="5488" height="1690" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FK_DimSemester_DimCourse]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="4" sourceattachpoint="11" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="6710" y="9552" />
+                    <point x="11598" y="9552" />
+                    <point x="11598" y="10543" />
+                    <point x="9995" y="10543" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="9824" top="7291" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="953" height="1416" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FK_DimVacancy_DimSemester]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="5" sourceattachpoint="0" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="10223" y="8207" />
+                    <point x="10223" y="7807" />
+                    <point x="10350" y="7807" />
+                    <point x="10350" y="7991" />
+                    <point x="10477" y="7991" />
+                    <point x="10477" y="7591" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="479" top="9094" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="3171" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FK_DimCourse_DimCourseOwner]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="6" sourceattachpoint="11" destattachpoint="10" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="779" y="9493" />
+                    <point x="2064" y="9493" />
+                    <point x="2064" y="9552" />
+                    <point x="3350" y="9552" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="1132" top="3455" logicalid="12" controlid="12" masterid="0" hint1="0" hint2="0" width="2080" height="897" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[TA_Enrollment_Fact-DimApplication]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="18" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="2912" y="3952" />
+                    <point x="2172" y="3952" />
+                    <point x="2172" y="3755" />
+                    <point x="1432" y="3755" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="-1987" top="2085" logicalid="13" controlid="13" masterid="0" hint1="0" hint2="0" width="799" height="1778" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="2" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[TA_Enrollment_Fact-DimDate]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="1" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="-1588" y="2584" />
+                    <point x="-1588" y="3073" />
+                    <point x="-1680" y="3073" />
+                    <point x="-1680" y="3563" />
+                  </connector>
+                </ddscontrol>
+              </dds>
+</DiagramLayout>
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>-6308</DiagramViewPortLeft>
+            <DiagramViewPortTop>-415</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>75</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Proyek 1</DataSourceID>
+  <Schema>
+    <xs:schema id="Fact4" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Fact4" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="06ac1d5e-72a7-481e-839e-6a3748f8de07">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_TA_Enrollment_Fact" msprop:design-time-name="f5de7637-a2d2-40e3-9dd8-caabb467570e" msprop:FriendlyName="TA_Enrollment_Fact" msprop:DbSchemaName="dbo" msprop:DbTableName="TA_Enrollment_Fact" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="fk_application" msprop:design-time-name="5db4aa9f-6c7b-413d-b91b-f476f58fcd80" msprop:DbColumnName="fk_application" msprop:FriendlyName="fk_application" type="xs:int" />
+                  <xs:element name="fk_date" msprop:design-time-name="da50ac0b-486b-4cfb-977f-e7d3cf1ea5fc" msprop:DbColumnName="fk_date" msprop:FriendlyName="fk_date" type="xs:int" />
+                  <xs:element name="total_vacancy" msprop:design-time-name="f1e22f29-cf61-411d-a144-c99ff2827a6a" msprop:DbColumnName="total_vacancy" msprop:FriendlyName="total_vacancy" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimApplication" msprop:design-time-name="27d0da38-0f68-4cb0-a27a-201ece385500" msprop:FriendlyName="DimApplication" msprop:DbSchemaName="dbo" msprop:DbTableName="DimApplication" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="applicant_number" msprop:design-time-name="009df976-c9c4-44c2-a516-5792680cac50" msprop:DbColumnName="applicant_number" msprop:FriendlyName="applicant_number" type="xs:int" />
+                  <xs:element name="participant_registration_number" msprop:design-time-name="4efc7eba-2fc4-4406-a34d-1e1780d4aa56" msprop:DbColumnName="participant_registration_number" msprop:FriendlyName="participant_registration_number">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="vacancy_id" msprop:design-time-name="c88451af-646b-4e41-92d6-43c94109a139" msprop:DbColumnName="vacancy_id" msprop:FriendlyName="vacancy_id" type="xs:int" />
+                  <xs:element name="send_date" msprop:design-time-name="16149a75-5f4b-4719-b2eb-222ce64f34f6" msprop:DbColumnName="send_date" msprop:FriendlyName="send_date" type="xs:dateTime" />
+                  <xs:element name="score" msprop:design-time-name="35fe694d-6a78-4dc1-bea1-65f78f69c93c" msprop:DbColumnName="score" msprop:FriendlyName="score">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="motivation" msprop:design-time-name="7322e141-d80c-4893-a9d7-7827ba6600f5" msprop:DbColumnName="motivation" msprop:FriendlyName="motivation">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="decision" msprop:design-time-name="9ab5b073-eb8a-4653-b71a-8759b8f5f297" msprop:DbColumnName="decision" msprop:FriendlyName="decision" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimDate" msprop:design-time-name="7532b258-99c3-4b13-b1eb-4a8e5aeb300d" msprop:FriendlyName="DimDate" msprop:DbSchemaName="dbo" msprop:DbTableName="DimDate" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="0368a94f-81dc-4df0-8a73-bcc43b706742" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="day_date" msprop:design-time-name="c7faf31a-c8c4-4883-b640-fcb4ddc0739d" msprop:DbColumnName="day_date" msprop:FriendlyName="day_date" type="xs:int" />
+                  <xs:element name="day_name" msprop:design-time-name="207ca663-77eb-402b-84e9-12d3a7c3a62b" msprop:DbColumnName="day_name" msprop:FriendlyName="day_name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="semester" msprop:design-time-name="196e44dd-1b69-47d0-b610-3e93279270db" msprop:DbColumnName="semester" msprop:FriendlyName="semester">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimSemester" msprop:design-time-name="8c1dcf35-e16d-4ca1-807c-74ce2af13c96" msprop:FriendlyName="DimSemester" msprop:DbSchemaName="dbo" msprop:DbTableName="DimSemester" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="1f65769b-f5f9-4284-be86-5aa21cd5ff95" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="course_id" msprop:design-time-name="40aba416-55f8-408f-9f36-930a709bc7a1" msprop:DbColumnName="course_id" msprop:FriendlyName="course_id" type="xs:int" />
+                  <xs:element name="academic_year" msprop:design-time-name="d046b44c-2fd0-40fc-bd70-b41ea08641fb" msprop:DbColumnName="academic_year" msprop:FriendlyName="academic_year">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="name" msprop:design-time-name="1fa95766-a3b1-4d68-b85e-f61096125840" msprop:DbColumnName="name" msprop:FriendlyName="name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="number_of_students" msprop:design-time-name="72062311-0c14-4f45-8cec-c5fbdeb28c3b" msprop:DbColumnName="number_of_students" msprop:FriendlyName="number_of_students" type="xs:int" />
+                  <xs:element name="ta_seats" msprop:design-time-name="2bb3381a-a705-4526-86d3-6e3c6e33613f" msprop:DbColumnName="ta_seats" msprop:FriendlyName="ta_seats" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimVacancy" msprop:design-time-name="5a2e8d81-b675-4a4b-aff5-227a0e305916" msprop:FriendlyName="DimVacancy" msprop:DbSchemaName="dbo" msprop:DbTableName="DimVacancy" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="e27c709c-f06d-448c-9043-6dc5b7e2aee9" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="semester_id" msprop:design-time-name="b7f8b96e-05b4-4e76-a51e-b3f5d702254c" msprop:DbColumnName="semester_id" msprop:FriendlyName="semester_id" type="xs:int" />
+                  <xs:element name="minimum_batch" msprop:design-time-name="4c279e9c-5578-4472-b8b6-21203c493a63" msprop:DbColumnName="minimum_batch" msprop:FriendlyName="minimum_batch" type="xs:int" />
+                  <xs:element name="deadline" msprop:design-time-name="0746b9e9-a357-4efc-9317-8cd40a95c9c9" msprop:DbColumnName="deadline" msprop:FriendlyName="deadline" type="xs:dateTime" />
+                  <xs:element name="teaching_duration" msprop:design-time-name="136e5e63-52a3-4912-bc26-bdd9a958642c" msprop:DbColumnName="teaching_duration" msprop:FriendlyName="teaching_duration" type="xs:unsignedByte" />
+                  <xs:element name="minimum_score" msprop:design-time-name="aed43deb-16c1-4279-9269-dbc348560f83" msprop:DbColumnName="minimum_score" msprop:FriendlyName="minimum_score">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="description" msprop:design-time-name="6caea94d-31d3-4ec0-86b1-f95b6b5e2144" msprop:DbColumnName="description" msprop:FriendlyName="description">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimCourse" msprop:design-time-name="0bb4e9a5-3120-4c47-9ba7-f58b398d8396" msprop:FriendlyName="DimCourse" msprop:DbSchemaName="dbo" msprop:DbTableName="DimCourse" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="f0652e1c-a97a-4398-8224-4f9e2188612d" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="course_code" msprop:design-time-name="a528759e-2a55-4cb1-b934-f3b20f1951f7" msprop:DbColumnName="course_code" msprop:FriendlyName="course_code">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="course_initial" msprop:design-time-name="5f481881-e7f0-4218-ae3a-c27ef75a00eb" msprop:DbColumnName="course_initial" msprop:FriendlyName="course_initial">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="name" msprop:design-time-name="ea8674d7-170f-4699-a2e8-139b6dccfcce" msprop:DbColumnName="name" msprop:FriendlyName="name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="credit" msprop:design-time-name="5bb65af2-a2df-4b9b-927d-a5d0a630c41a" msprop:DbColumnName="credit" msprop:FriendlyName="credit" type="xs:unsignedByte" />
+                  <xs:element name="course_owner_id" msprop:design-time-name="5757ef3d-d334-45c8-87ae-869857544d73" msprop:DbColumnName="course_owner_id" msprop:FriendlyName="course_owner_id" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimCourseOwner" msprop:design-time-name="9582ef29-c660-4458-9905-5cda939f9688" msprop:FriendlyName="DimCourseOwner" msprop:DbSchemaName="dbo" msprop:DbTableName="DimCourseOwner" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="6b1d7e87-31a2-4bc7-b846-1486185c9a40" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="name" msprop:design-time-name="9085967f-6294-4d8a-af46-40d1717eee6a" msprop:DbColumnName="name" msprop:FriendlyName="name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="curriculum" msprop:design-time-name="a1d31ccd-f6ae-4897-a3a9-f2be658efa8b" msprop:DbColumnName="curriculum" msprop:FriendlyName="curriculum">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="level" msprop:design-time-name="cfa30af1-ba36-440f-aab6-c0f2d26943cf" msprop:DbColumnName="level" msprop:FriendlyName="level">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="status" msprop:design-time-name="e434fc65-4cf0-4efe-8877-2127e417e2de" msprop:DbColumnName="status" msprop:FriendlyName="status">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="description" msprop:design-time-name="1f34787c-939c-4f49-8e53-e56a7666656b" msprop:DbColumnName="description" msprop:FriendlyName="description">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_TA_Enrollment_Fact" />
+          <xs:field xpath="fk_application" />
+          <xs:field xpath="fk_date" />
+        </xs:unique>
+        <xs:unique name="dbo_DimApplication_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimApplication" />
+          <xs:field xpath="applicant_number" />
+        </xs:unique>
+        <xs:unique name="dbo_DimDate_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimDate" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_DimSemester_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimSemester" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_DimVacancy_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimVacancy" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_DimCourse_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimCourse" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_DimCourseOwner_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimCourseOwner" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:keyref name="FK_DimCourse_DimCourseOwner" refer="dbo_DimCourseOwner_Constraint1">
+          <xs:selector xpath=".//dbo_DimCourse" />
+          <xs:field xpath="course_owner_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_DimVacancy_DimSemester" refer="dbo_DimSemester_Constraint1">
+          <xs:selector xpath=".//dbo_DimVacancy" />
+          <xs:field xpath="semester_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_DimSemester_DimCourse" refer="dbo_DimCourse_Constraint1">
+          <xs:selector xpath=".//dbo_DimSemester" />
+          <xs:field xpath="course_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_DimApplication_DimVacancy" refer="dbo_DimVacancy_Constraint1">
+          <xs:selector xpath=".//dbo_DimApplication" />
+          <xs:field xpath="vacancy_id" />
+        </xs:keyref>
+      </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="TA_Enrollment_Fact-DimApplication" msdata:parent="dbo_DimApplication" msdata:child="dbo_TA_Enrollment_Fact" msdata:parentkey="applicant_number" msdata:childkey="fk_application" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="TA_Enrollment_Fact-DimDate" msdata:parent="dbo_DimDate" msdata:child="dbo_TA_Enrollment_Fact" msdata:parentkey="id" msdata:childkey="fk_date" msprop:IsLogical="True" msprop:Description="" />
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:schema>
+    <Fact4 xmlns="" />
+  </Schema>
+</DataSourceView>

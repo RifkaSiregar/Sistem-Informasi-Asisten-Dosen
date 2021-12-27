@@ -1,0 +1,959 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="da0bec39-0445-46cf-9512-f15a707dd877" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact4</ID>
+  <Name>Fact4</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="14" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9985" scrolltop="4663" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="19315" y="12488" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimApplication" left="2209" top="10898" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="5106" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000f21300009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimApplication" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimCourseOwner" left="-3586" top="16249" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="4375" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c000017110000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimCourseOwner" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="TA_Enrollment_Fact" left="-3577" top="11355" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="4094" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000fe0f0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_TA_Enrollment_Fact" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimDate" left="-7812" top="11117" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000b80b0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimDate" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimCourse" left="3079" top="16133" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3360" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000200d0000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimCourse" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimSemester" left="8911" top="16017" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3757" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000ad0e0000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimSemester" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimVacancy" left="9150" top="10699" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="3466" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00008a0d00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimVacancy" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7015" top="10647" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="2435" height="898" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_DimApplication_DimVacancy]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="1" sourceattachpoint="10" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="9150" y="11046" />
+              <point x="8233" y="11046" />
+              <point x="8233" y="11245" />
+              <point x="7315" y="11245" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="217" top="11396" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="2292" height="860" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[TA_Enrollment_Fact-DimApplication]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="20" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2209" y="11795" />
+              <point x="1363" y="11795" />
+              <point x="1363" y="11956" />
+              <point x="517" y="11956" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="489" top="15969" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="2890" height="1366" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_DimCourse_DimCourseOwner]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="5" sourceattachpoint="17" destattachpoint="10" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="789" y="16935" />
+              <point x="1189" y="16935" />
+              <point x="1189" y="16269" />
+              <point x="3079" y="16269" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-5112" top="11530" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="1835" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[TA_Enrollment_Fact-DimDate]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="3" sourceattachpoint="13" destattachpoint="14" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-4812" y="11929" />
+              <point x="-4195" y="11929" />
+              <point x="-4195" y="11956" />
+              <point x="-3577" y="11956" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="6139" top="16403" logicalid="12" controlid="12" masterid="0" hint1="0" hint2="0" width="3072" height="816" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_DimSemester_DimCourse]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="6" sourceattachpoint="13" destattachpoint="16" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6439" y="16819" />
+              <point x="7551" y="16819" />
+              <point x="7551" y="16703" />
+              <point x="8911" y="16703" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="9290" top="14394" logicalid="13" controlid="13" masterid="0" hint1="0" hint2="0" width="799" height="2123" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_DimVacancy_DimSemester]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="7" sourceattachpoint="2" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="9689" y="16017" />
+              <point x="9689" y="15356" />
+              <point x="9783" y="15356" />
+              <point x="9783" y="14694" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-9985</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>4663</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-7812</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>10699</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="67fe8072-04ff-4fa1-a1a8-7ba7f5baca08">
+      <ID>Dim Course Owner 3</ID>
+      <Name>Dim Course Owner 3</Name>
+      <DimensionID>Dim Course Owner 3</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3146ab34-4962-4c87-a970-53c58d1546d1">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="715ec0f7-361f-4ef3-b277-14640ca799ac">
+      <ID>Dim Course 3</ID>
+      <Name>Dim Course 3</Name>
+      <DimensionID>Dim Course 3</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="cd99fef5-ddf7-4fd4-81d0-0a33fa47d080">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9b1a7dca-b4c1-4a14-9678-8a72f986ddca">
+          <AttributeID>Course Owner Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f11538b0-e098-4ff2-b37a-31438bd32a9e">
+      <ID>Dim Vacancy</ID>
+      <Name>Dim Vacancy</Name>
+      <DimensionID>Dim Vacancy</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ab971b4d-7caa-42b3-8a90-3a65e4e3e303">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ba261012-4288-466e-a3f8-ffaa4a7ba859">
+          <AttributeID>Semester Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="b059b965-fbdc-4611-8c36-1b72ccabbfcd">
+      <ID>Dim Semester 3</ID>
+      <Name>Dim Semester 3</Name>
+      <DimensionID>Dim Semester 3</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4cda1870-092f-4452-90f4-7b54639abf6d">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="04800f7c-3991-4251-9c72-d885e69afeb2">
+          <AttributeID>Course Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="fe978d90-c3f3-4a6e-a109-7c9ba04d9ff9">
+      <ID>Dim Date 3</ID>
+      <Name>Dim Date 3</Name>
+      <DimensionID>Dim Date 3</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4f860555-def0-408c-b01c-92d84230a7bc">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ba3b1c3e-e5a7-4ae9-9a7a-c6917268653d">
+      <ID>Dim Application</ID>
+      <Name>Dim Application</Name>
+      <DimensionID>Dim Application</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e107f430-9250-43e4-8393-4d8c744f6961">
+          <AttributeID>Applicant Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8ebc9301-c0a8-4b42-963b-fc0bed100fa1">
+          <AttributeID>Vacancy Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="f9849e61-47c1-40ff-af9a-63e7f88908b5">
+      <ID>Dim Course Owner</ID>
+      <Name>Dim Course Owner</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="4e05ad17-773d-49ed-a967-4dd7c491b7c9">
+          <ID>Dim Course Owner Count</ID>
+          <Name>Dim Course Owner Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="da41128e-35f5-4b20-a943-cec3a945f12d">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="7ae521c6-234c-43c6-8e7d-5e0963d2d8a3">
+              <TableID>dbo_DimCourseOwner</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="668820c7-f96a-48bb-9ec7-486ae54a1650">
+          <CubeDimensionID>Dim Course Owner 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c42d00bc-85a6-4e11-b1a1-cf0b78217cf2">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="552900d2-ab8a-439f-959b-0ccecd77dd91">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="afbaff41-1b36-4ecf-9506-c961f88f39d3">
+                    <TableID>dbo_DimCourseOwner</TableID>
+                    <ColumnID>id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="885ac706-40e9-4201-87f2-b794406e8bf1">
+      <ID>Dim Course</ID>
+      <Name>Dim Course</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="f55d5153-5e65-4353-a63b-62c67ae98731">
+          <ID>Credit</ID>
+          <Name>Credit</Name>
+          <Source dwd:design-time-name="a4555f6d-a692-408f-810e-959abe7c444d">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cece2b2f-5232-4870-a7f6-62892981e983">
+              <TableID>dbo_DimCourse</TableID>
+              <ColumnID>credit</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="aaf6c848-40d1-43fb-a0e2-185057cfad2b">
+          <ID>Dim Course Count</ID>
+          <Name>Dim Course Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="4c479432-196a-4017-abcf-35527658b293">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="9870bbb7-44e4-48f8-b380-1850784ba620">
+              <TableID>dbo_DimCourse</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="3de34f28-db36-4b97-88dc-18f97c18f7c9">
+          <CubeDimensionID>Dim Course 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2a1bc60d-7e2a-430b-96d8-8749c5eb64b4">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0add8896-7f82-49d1-951a-5a76e572a76d">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4085808d-67f9-4e2d-a2e4-38c9b777123a">
+                    <TableID>dbo_DimCourse</TableID>
+                    <ColumnID>id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ca5939cf-a9b5-40de-a463-4f701357cc27">
+          <CubeDimensionID>Dim Course Owner 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8176dea6-2a64-4a66-b26f-54172498d66f">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b6d1a339-d5cf-4677-8dab-e0622401012a">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a0f71efd-8926-4b2b-9bfb-66c90ce6dfff">
+                    <TableID>dbo_DimCourse</TableID>
+                    <ColumnID>course_owner_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="f3f8b316-3d7b-4950-bb2e-d06b5240d658">
+      <ID>Dim Vacancy</ID>
+      <Name>Dim Vacancy</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="04f7fc9c-0b85-4b62-bc4a-566fb37190f7">
+          <ID>Minimum Batch</ID>
+          <Name>Minimum Batch</Name>
+          <Source dwd:design-time-name="6bc6f379-dc31-47d1-b10b-95802e041a9b">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="bea06f3f-2480-4426-97a2-827386038374">
+              <TableID>dbo_DimVacancy</TableID>
+              <ColumnID>minimum_batch</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="db58dde1-71c6-4ee5-bbe8-a2e15b8ff314">
+          <ID>Teaching Duration</ID>
+          <Name>Teaching Duration</Name>
+          <Source dwd:design-time-name="59bc02d0-b250-4784-917e-0fc5a7eda3d0">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a36a2ed9-b8df-4d1f-8d3b-b694f0785761">
+              <TableID>dbo_DimVacancy</TableID>
+              <ColumnID>teaching_duration</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d25e40f8-2918-4f9d-b713-c2b7c3ae0b7c">
+          <ID>Dim Vacancy Count</ID>
+          <Name>Dim Vacancy Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="404ddf96-7551-45a3-8eff-3f91ef13017f">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="009bee97-c270-4dc5-adad-11e9c16fb251">
+              <TableID>dbo_DimVacancy</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="75e416bf-6c17-44a8-91d3-d8ed577e0fa4">
+          <CubeDimensionID>Dim Vacancy</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="89bda828-124a-4232-a76c-87ade781bca4">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="70a9e637-ab3f-411a-91fd-f2e2c1fb4210">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="27870692-7d7e-4269-bddc-0480f3980e66">
+                    <TableID>dbo_DimVacancy</TableID>
+                    <ColumnID>id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5522fe64-8ddf-42f7-b440-164a6d5113e6">
+          <CubeDimensionID>Dim Semester 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="24be2d9d-022c-452c-8409-bab931a3222d">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bf35ab5e-09cb-4ec3-b8e7-4886417157ed">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="795e050d-2e90-400b-ad74-980d802f473e">
+                    <TableID>dbo_DimVacancy</TableID>
+                    <ColumnID>semester_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="86e472be-81c9-481e-a4f1-fcbfa3929c31">
+          <CubeDimensionID>Dim Course 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="bd79bc5c-a356-4ab9-9e24-6ce4533c7b27">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Semester 3</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Course Id</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="66f10280-2284-4593-b768-f7673dcf2870">
+          <CubeDimensionID>Dim Course Owner 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f5042cd9-3e5a-4f3f-887e-690748bbf2ac">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Course 3</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Course Owner Id</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="6a1857d7-420e-452b-8c65-5c9814296512">
+      <ID>Dim Semester</ID>
+      <Name>Dim Semester</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="46227fd8-3314-49f0-95c0-384f0403a525">
+          <ID>Number Of Students</ID>
+          <Name>Number Of Students</Name>
+          <Source dwd:design-time-name="7f332a25-8cf3-45f2-bac8-68da6f705571">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="359cb302-116e-4174-86eb-cdfccc8d6d6d">
+              <TableID>dbo_DimSemester</TableID>
+              <ColumnID>number_of_students</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="69a7dd13-22f8-4b24-839f-891d254d87bc">
+          <ID>Ta Seats</ID>
+          <Name>Ta Seats</Name>
+          <Source dwd:design-time-name="c1768f40-19ac-45c6-b71a-bd4d494a5722">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8d1e9c46-8292-49b0-af81-810bb80e3c5b">
+              <TableID>dbo_DimSemester</TableID>
+              <ColumnID>ta_seats</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2a6d02d2-f9eb-4017-9bfb-93f183d56c1a">
+          <ID>Dim Semester Count</ID>
+          <Name>Dim Semester Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="0eef1b79-31c9-48b6-962b-476d81698e7f">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="ad5f2e5a-2ae5-4ab9-8bd8-cd3ae84c26af">
+              <TableID>dbo_DimSemester</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="549e219f-3da3-4cf5-b707-b04e4fedc21b">
+          <CubeDimensionID>Dim Semester 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="567d516c-ff7f-408f-a03d-b45f9fe36594">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="305dbaca-bee9-4bef-93e7-2acb97db72c3">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d3986178-45f1-4c88-8acf-c34c6a7d5832">
+                    <TableID>dbo_DimSemester</TableID>
+                    <ColumnID>id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6fe91e96-9f5c-4395-9384-a70c9ef5a634">
+          <CubeDimensionID>Dim Course 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0c6e020f-40b0-4298-aeae-abd967c9eab2">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c2b1eb0a-1663-4ca4-bde9-bd12d34c9588">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="09b4b103-a4fb-4cf1-abe2-5579d34d7290">
+                    <TableID>dbo_DimSemester</TableID>
+                    <ColumnID>course_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="bd3a7708-f245-4964-a3ec-405ff389024c">
+          <CubeDimensionID>Dim Course Owner 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="32ec809e-55b7-4095-9a9f-f1bed8a07a94">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Course 3</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Course Owner Id</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="a87df265-ab75-4580-bc0b-9fac1c0788b2">
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="3a2fa8d6-018f-43dd-8986-66c1f0130206">
+          <ID>Day Date</ID>
+          <Name>Day Date</Name>
+          <Source dwd:design-time-name="315cba4f-9ffb-4d90-9bd0-682261835472">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="df1034f6-b8c6-4343-a9c1-5ca6ea201326">
+              <TableID>dbo_DimDate</TableID>
+              <ColumnID>day_date</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a9558a89-0761-46aa-a70c-bab1f7478097">
+          <ID>Dim Date Count</ID>
+          <Name>Dim Date Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="c0590f51-dbee-423c-86e4-10553414a173">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="318ef3a6-5912-421a-ba91-8717c6c92a2b">
+              <TableID>dbo_DimDate</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="b5304a54-4208-4b2a-840a-78fbe4165d7c">
+          <CubeDimensionID>Dim Date 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6132f905-b438-4741-a64b-a06242a14390">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fc2efc58-04d8-4cf6-83d2-2490e63b05d4">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="eebef6dd-b173-490f-85fb-0c165e933478">
+                    <TableID>dbo_DimDate</TableID>
+                    <ColumnID>id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="2c87ca29-1f65-4923-a095-0a4401cdce13">
+      <ID>Dim Application</ID>
+      <Name>Dim Application</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="77e4ee3a-a283-4b68-bfa2-9064f3dba1be">
+          <ID>Decision</ID>
+          <Name>Decision</Name>
+          <Source dwd:design-time-name="eb61606f-a2c6-4e04-8c94-9c48190c0174">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d60d6058-29b4-4c20-bed7-f11a490a066b">
+              <TableID>dbo_DimApplication</TableID>
+              <ColumnID>decision</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="76410045-97b1-4c02-870a-6f4b993badfe">
+          <ID>Dim Application Count</ID>
+          <Name>Dim Application Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="6bb8b1e4-a50f-472e-b2a2-004906e3b3ca">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="9bdf0c1c-62d7-4622-8c35-40e7af8be8b4">
+              <TableID>dbo_DimApplication</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="fa703078-431f-4aab-9b12-97ed38e828c6">
+          <CubeDimensionID>Dim Application</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="196fb8d8-27c8-4061-8cf4-7fc34fcdd27f">
+              <AttributeID>Applicant Number</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="62f0cbf9-2ed5-4849-a36e-a8d6caa62925">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6a91d3bf-34cc-4ec0-81bc-cf8a22e0cae5">
+                    <TableID>dbo_DimApplication</TableID>
+                    <ColumnID>applicant_number</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="db4d348e-fd75-4a46-a5e1-b8e25eb1c2a8">
+          <CubeDimensionID>Dim Vacancy</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2ea5d2ec-5f01-46e9-9148-5d1895b27184">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1a1f408b-8eba-4e06-894c-a11cf5676e8e">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="858a50da-4099-4579-a9d0-04b123b1016e">
+                    <TableID>dbo_DimApplication</TableID>
+                    <ColumnID>vacancy_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="f4fca0e1-b5d6-4b02-92d6-2f1d458207e3">
+          <CubeDimensionID>Dim Semester 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="701d203f-c0df-4cb5-b87c-cb7273f4baa5">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Vacancy</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Semester Id</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="182f9104-a05a-402c-864b-d045ae760809">
+          <CubeDimensionID>Dim Course 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a659b6e2-f1e0-4022-85a1-4ceefbd5d3ef">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Semester 3</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Course Id</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="4b234b09-007c-42fc-ae39-26894db2e5d5">
+          <CubeDimensionID>Dim Course Owner 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="56f87a4b-6a9b-4904-9806-c2bd45fa69fa">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Course 3</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Course Owner Id</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="2e6f7b47-9959-4e68-b587-3417a85da54d">
+      <ID>TA Enrollment Fact</ID>
+      <Name>TA Enrollment Fact</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="1b9504d1-ae4d-4fc8-82e6-40f09d193329">
+          <ID>Total Vacancy</ID>
+          <Name>Total Vacancy</Name>
+          <Source dwd:design-time-name="ef9766b8-fa5e-4a9a-a337-a4ceb885c868">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b6fb352e-2400-4dea-b95d-5520f5cb051e">
+              <TableID>dbo_TA_Enrollment_Fact</TableID>
+              <ColumnID>total_vacancy</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="13af5ec7-efcb-4d4f-a812-e030f446f7d2">
+          <ID>TA Enrollment Fact Count</ID>
+          <Name>TA Enrollment Fact Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="6ff8ee14-ba5c-4203-9b54-ec4c2c2d020f">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="31351600-469f-40ab-8c50-1df6a7acbaee">
+              <TableID>dbo_TA_Enrollment_Fact</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ae0c3d61-46b5-4e40-94cf-2626b1d7d069">
+          <CubeDimensionID>Dim Application</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5137d5a8-43aa-42c7-821b-543ea4a89554">
+              <AttributeID>Applicant Number</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="06cf3b31-946b-4c98-b78f-9cbd97d980ff">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="35e59344-4419-418e-9348-0d7b51e03f47">
+                    <TableID>dbo_TA_Enrollment_Fact</TableID>
+                    <ColumnID>fk_application</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3b1e543d-5467-4be1-8c51-b13492f72fc6">
+          <CubeDimensionID>Dim Date 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="36a2b5b1-2ad2-4408-a1b4-1b04637211d9">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0f51ba0d-54a8-4252-8d12-8e4ebd113624">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="bd802a1f-3a77-4120-9d2f-21b06413d469">
+                    <TableID>dbo_TA_Enrollment_Fact</TableID>
+                    <ColumnID>fk_date</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="b0035d77-1cec-4150-84b7-eac7b54b05b7">
+          <CubeDimensionID>Dim Vacancy</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5c33db38-d793-4951-aaa0-cf738ae717ed">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Application</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Vacancy Id</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="b07daf6d-ea50-4bf4-b6e5-1c14d24212f8">
+          <CubeDimensionID>Dim Semester 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="192590ad-651d-4625-9c00-6fa283562b8c">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Vacancy</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Semester Id</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="b3fefec9-bff9-4745-851b-65f339314400">
+          <CubeDimensionID>Dim Course 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="48df44a0-d798-4553-add5-0f192605d8c4">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Semester 3</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Course Id</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="ded15370-ed65-42cb-8551-8af88c8b999f">
+          <CubeDimensionID>Dim Course Owner 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="62fd8667-5f0c-461a-b552-eeeaf8259018">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Course 3</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Course Owner Id</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="4d35a5fb-86ea-4484-b4e4-80a27edb0857">
+    <DataSourceViewID>Fact4</DataSourceViewID>
+  </Source>
+</Cube>

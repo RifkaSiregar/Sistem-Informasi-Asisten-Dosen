@@ -1,0 +1,1596 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/4/2021 7:53:56 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-8JF79GS"
+  DTS:CreatorName="DESKTOP-8JF79GS\Rifka"
+  DTS:DTSID="{3CE135C6-AC9F-42AA-BB4A-AFD8DF9FFCE9}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.2165.0"
+  DTS:LocaleID="14345"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{D0217C4A-0D8D-4FC6-BA58-787292DFB43D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-8JF79GS.Proyek]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{75A8329E-96DF-4F6E-8457-FE0D4E5231D9}"
+      DTS:ObjectName="DESKTOP-8JF79GS.Proyek">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-8JF79GS;Initial Catalog=Proyek;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{C3A4A815-95EC-4222-B1AC-F6BFD940DDCF}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.15.0;Data Source=C:\Users\Rifka\Documents\Proyek\Data Excel\Data.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{9A2E5A24-2348-44A3-8BF3-7975538850FF}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Application Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Application Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Application Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Application Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Application Data Conversion.Inputs[Data Conversion Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Application Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Application Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Application Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Application Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Application Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Application Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Application$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Application Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[applicant_number]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].ExternalColumns[applicant_number]"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[applicant_number]"
+                      name="applicant_number"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[participant_registration_number]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].ExternalColumns[participant_registration_number]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[participant_registration_number]"
+                      name="participant_registration_number"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[vacancy_id]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].ExternalColumns[vacancy_id]"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[vacancy_id]"
+                      name="vacancy_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[send_date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].ExternalColumns[send_date]"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[send_date]"
+                      name="send_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[motivation]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].ExternalColumns[motivation]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[motivation]"
+                      name="motivation"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[decision]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].ExternalColumns[decision]"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[decision]"
+                      name="decision"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[score]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].ExternalColumns[score]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[score]"
+                      name="score"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].ExternalColumns[applicant_number]"
+                      dataType="r8"
+                      name="applicant_number" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].ExternalColumns[participant_registration_number]"
+                      dataType="wstr"
+                      length="255"
+                      name="participant_registration_number" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].ExternalColumns[vacancy_id]"
+                      dataType="r8"
+                      name="vacancy_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].ExternalColumns[send_date]"
+                      dataType="date"
+                      name="send_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].ExternalColumns[motivation]"
+                      dataType="wstr"
+                      length="255"
+                      name="motivation" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].ExternalColumns[decision]"
+                      dataType="r8"
+                      name="decision" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].ExternalColumns[score]"
+                      dataType="wstr"
+                      length="255"
+                      name="score" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[applicant_number]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[applicant_number]"
+                      name="applicant_number" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[participant_registration_number]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[participant_registration_number]"
+                      name="participant_registration_number" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[vacancy_id]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[vacancy_id]"
+                      name="vacancy_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[score]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[score]"
+                      name="score" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[send_date]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[send_date]"
+                      name="send_date" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[motivation]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[motivation]"
+                      name="motivation" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[decision]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[decision]"
+                      name="decision" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Date Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Date Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Date Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Date Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Date Data Conversion.Inputs[Data Conversion Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Date Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Date Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Date Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Date Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Date Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Date Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Date Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Date Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Date$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Date Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].Columns[id]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].ExternalColumns[id]"
+                      lineageId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].Columns[day_date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].ExternalColumns[day_date]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].Columns[day_date]"
+                      name="day_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].Columns[day_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].ExternalColumns[day_name]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].Columns[day_name]"
+                      name="day_name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].Columns[semester]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].ExternalColumns[semester]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].Columns[semester]"
+                      name="semester"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].ExternalColumns[id]"
+                      dataType="r8"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].ExternalColumns[day_date]"
+                      dataType="wstr"
+                      length="255"
+                      name="day_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].ExternalColumns[day_name]"
+                      dataType="wstr"
+                      length="255"
+                      name="day_name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].ExternalColumns[semester]"
+                      dataType="wstr"
+                      length="255"
+                      name="semester" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Error Output].Columns[id]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Error Output].Columns[day_date]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Error Output].Columns[day_date]"
+                      name="day_date" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Error Output].Columns[day_name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Error Output].Columns[day_name]"
+                      name="day_name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Error Output].Columns[semester]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Error Output].Columns[semester]"
+                      name="semester" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination (Application Dimension)"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination (Application Dimension)"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimApplication]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8JF79GS.Proyek]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8JF79GS.Proyek]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].Columns[applicant_number]"
+                      cachedDataType="r8"
+                      cachedName="applicant_number"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].ExternalColumns[applicant_number]"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[applicant_number]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].Columns[participant_registration_number]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="participant_registration_number"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].ExternalColumns[participant_registration_number]"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[participant_registration_number]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].Columns[vacancy_id]"
+                      cachedDataType="r8"
+                      cachedName="vacancy_id"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].ExternalColumns[vacancy_id]"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[vacancy_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].Columns[send_date]"
+                      cachedDataType="date"
+                      cachedName="send_date"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].ExternalColumns[send_date]"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[send_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].Columns[motivation]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="motivation"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].ExternalColumns[motivation]"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[motivation]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].Columns[decision]"
+                      cachedDataType="r8"
+                      cachedName="decision"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].ExternalColumns[decision]"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[decision]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].Columns[score]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="score"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].ExternalColumns[score]"
+                      lineageId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output].Columns[score]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].ExternalColumns[applicant_number]"
+                      dataType="i4"
+                      name="applicant_number" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].ExternalColumns[participant_registration_number]"
+                      dataType="wstr"
+                      length="255"
+                      name="participant_registration_number" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].ExternalColumns[vacancy_id]"
+                      dataType="i4"
+                      name="vacancy_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].ExternalColumns[send_date]"
+                      dataType="dbDate"
+                      name="send_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].ExternalColumns[score]"
+                      dataType="wstr"
+                      length="255"
+                      name="score" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].ExternalColumns[motivation]"
+                      dataType="wstr"
+                      length="255"
+                      name="motivation" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input].ExternalColumns[decision]"
+                      dataType="i4"
+                      name="decision" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination (Date Dimension)"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination (Date Dimension)"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8JF79GS.Proyek]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8JF79GS.Proyek]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Inputs[OLE DB Destination Input].Columns[id]"
+                      cachedDataType="r8"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Inputs[OLE DB Destination Input].Columns[day_date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="day_date"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Inputs[OLE DB Destination Input].ExternalColumns[day_date]"
+                      lineageId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].Columns[day_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Inputs[OLE DB Destination Input].Columns[day_name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="day_name"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Inputs[OLE DB Destination Input].ExternalColumns[day_name]"
+                      lineageId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].Columns[day_name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Inputs[OLE DB Destination Input].Columns[semester]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="semester"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Inputs[OLE DB Destination Input].ExternalColumns[semester]"
+                      lineageId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output].Columns[semester]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Inputs[OLE DB Destination Input].ExternalColumns[day_date]"
+                      dataType="dbDate"
+                      name="day_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Inputs[OLE DB Destination Input].ExternalColumns[day_name]"
+                      dataType="wstr"
+                      length="255"
+                      name="day_name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Inputs[OLE DB Destination Input].ExternalColumns[semester]"
+                      dataType="wstr"
+                      length="255"
+                      name="semester" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension)"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination (Vacancy Dimension)"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimVacancy]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-8JF79GS.Proyek]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-8JF79GS.Proyek]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].Columns[id]"
+                      cachedDataType="r8"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].Columns[semester_id]"
+                      cachedDataType="r8"
+                      cachedName="semester_id"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].ExternalColumns[semester_id]"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[semester_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].Columns[minimum_batch]"
+                      cachedDataType="r8"
+                      cachedName="minimum_batch"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].ExternalColumns[minimum_batch]"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[minimum_batch]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].Columns[deadline]"
+                      cachedDataType="date"
+                      cachedName="deadline"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].ExternalColumns[deadline]"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[deadline]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].Columns[teaching_duration]"
+                      cachedDataType="r8"
+                      cachedName="teaching_duration"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].ExternalColumns[teaching_duration]"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[teaching_duration]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].Columns[minimum_score]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="minimum_score"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].ExternalColumns[minimum_score]"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[minimum_score]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].Columns[description]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="description"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].ExternalColumns[description]"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[description]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].ExternalColumns[semester_id]"
+                      dataType="i4"
+                      name="semester_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].ExternalColumns[minimum_batch]"
+                      dataType="i4"
+                      name="minimum_batch" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].ExternalColumns[deadline]"
+                      dataType="dbDate"
+                      name="deadline" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].ExternalColumns[teaching_duration]"
+                      dataType="ui1"
+                      name="teaching_duration" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].ExternalColumns[minimum_score]"
+                      dataType="wstr"
+                      length="255"
+                      name="minimum_score" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input].ExternalColumns[description]"
+                      dataType="wstr"
+                      length="255"
+                      name="description" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Vacancy Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Vacancy Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Vacancy Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Vacancy Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Vacancy Data Conversion.Inputs[Data Conversion Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Vacancy Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Vacancy Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Vacancy Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Vacancy Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Vacancy Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Vacancy Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Vacancy$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Vacancy Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[id]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].ExternalColumns[id]"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[semester_id]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].ExternalColumns[semester_id]"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[semester_id]"
+                      name="semester_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[minimum_batch]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].ExternalColumns[minimum_batch]"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[minimum_batch]"
+                      name="minimum_batch"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[deadline]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].ExternalColumns[deadline]"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[deadline]"
+                      name="deadline"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[teaching_duration]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].ExternalColumns[teaching_duration]"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[teaching_duration]"
+                      name="teaching_duration"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[minimum_score]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].ExternalColumns[minimum_score]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[minimum_score]"
+                      name="minimum_score"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[description]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].ExternalColumns[description]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].Columns[description]"
+                      name="description"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].ExternalColumns[id]"
+                      dataType="r8"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].ExternalColumns[semester_id]"
+                      dataType="r8"
+                      name="semester_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].ExternalColumns[minimum_batch]"
+                      dataType="r8"
+                      name="minimum_batch" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].ExternalColumns[deadline]"
+                      dataType="date"
+                      name="deadline" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].ExternalColumns[teaching_duration]"
+                      dataType="r8"
+                      name="teaching_duration" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].ExternalColumns[minimum_score]"
+                      dataType="wstr"
+                      length="255"
+                      name="minimum_score" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output].ExternalColumns[description]"
+                      dataType="wstr"
+                      length="255"
+                      name="description" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[id]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[semester_id]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[semester_id]"
+                      name="semester_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[minimum_batch]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[minimum_batch]"
+                      name="minimum_batch" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[deadline]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[deadline]"
+                      name="deadline" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[teaching_duration]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[teaching_duration]"
+                      name="teaching_duration" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[minimum_score]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[minimum_score]"
+                      name="minimum_score" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[description]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[description]"
+                      name="description" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension).Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Vacancy Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output1]"
+              endId="Package\Data Flow Task\OLE DB Destination (Date Dimension).Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Date Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output2]"
+              endId="Package\Data Flow Task\OLE DB Destination (Application Dimension).Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Application Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task\Vacancy Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\Vacancy Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output1]"
+              endId="Package\Data Flow Task\Date Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\Date Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output2]"
+              endId="Package\Data Flow Task\Application Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\Application Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Data Flow Task\Date Excel Source"
+          TopLeft="489,18" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Data Flow Task\Vacancy Excel Source"
+          TopLeft="119,32" />
+        <NodeLayout
+          Size="257,42"
+          Id="Package\Data Flow Task\OLE DB Destination (Date Dimension)"
+          TopLeft="447,212" />
+        <NodeLayout
+          Size="274,42"
+          Id="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension)"
+          TopLeft="77,212" />
+        <NodeLayout
+          Size="182,47"
+          Id="Package\Data Flow Task\Date Data Conversion"
+          TopLeft="478,118" />
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Data Flow Task\Vacancy Data Conversion"
+          TopLeft="115,111" />
+        <NodeLayout
+          Size="286,42"
+          Id="Package\Data Flow Task\OLE DB Destination (Application Dimension)"
+          TopLeft="750,233" />
+        <NodeLayout
+          Size="211,42"
+          Id="Package\Data Flow Task\Application Data Conversion"
+          TopLeft="784,137" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Data Flow Task\Application Excel Source"
+          TopLeft="791,19" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="211.75,74">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output2]"
+          TopLeft="891.25,179">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output1]"
+          TopLeft="572.25,165">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47"
+              Start="0,0"
+              End="0,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="214,153">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59"
+              Start="0,0"
+              End="0,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output2]"
+          TopLeft="888.5,61">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76"
+              Start="0,0"
+              End="0,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output1]"
+          TopLeft="570,60">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Date Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Vacancy Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination (Date Dimension)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination (Vacancy Dimension)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination (Application Dimension)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Application Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

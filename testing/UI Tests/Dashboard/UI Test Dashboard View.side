@@ -1,0 +1,54 @@
+{
+  "id": "c5eb67ad-4212-40c8-81e9-c1adbe7a9b2a",
+  "version": "2.0",
+  "name": "UI Test Dashboard View",
+  "url": "http://127.0.0.1:8000/dashboard",
+  "tests": [{
+    "id": "f44a6147-4e4b-4f8d-bbee-b5af1346d14a",
+    "name": "TC-04-01.2",
+    "commands": []
+  }, {
+    "id": "0c4032bd-06fa-41b0-bf1e-edc2aeb682b7",
+    "name": "TC-04-01.1",
+    "commands": []
+  }, {
+    "id": "dea3d443-b0b2-4be3-8ddd-b9a6bd3c68de",
+    "name": "TC-04-01.3",
+    "commands": []
+  }, {
+    "id": "86e292e3-4909-40c7-ac12-492cd90837b5",
+    "name": "TC-04-01.4",
+    "commands": []
+  }],
+  "suites": [{
+    "id": "fc24fb9a-13d0-456e-aa86-e896e7ce3710",
+    "name": "Student Role",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0c4032bd-06fa-41b0-bf1e-edc2aeb682b7"]
+  }, {
+    "id": "475d6844-45cb-49ab-ad23-b2127ba15aa4",
+    "name": "TA Role",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f44a6147-4e4b-4f8d-bbee-b5af1346d14a"]
+  }, {
+    "id": "a2c8e832-f4f5-4347-852b-ab3a6c1e3456",
+    "name": "Admin Role",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["86e292e3-4909-40c7-ac12-492cd90837b5"]
+  }, {
+    "id": "0c0ffbee-d189-4682-8b3b-ec1d4375bcf8",
+    "name": "Lecturer Role",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["dea3d443-b0b2-4be3-8ddd-b9a6bd3c68de"]
+  }],
+  "urls": [],
+  "plugins": []
+}
